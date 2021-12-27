@@ -38,11 +38,12 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+<!--        特殊jar-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
-
+<!--        eureka的客户端-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>

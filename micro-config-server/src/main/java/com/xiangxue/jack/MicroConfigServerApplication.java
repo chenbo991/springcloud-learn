@@ -6,6 +6,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication(scanBasePackages = {"com.xiangxue.jack"})
+//表示这个是一个配置中心
 @EnableConfigServer
 // 注册到eureka
 @EnableEurekaClient

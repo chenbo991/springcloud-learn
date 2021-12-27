@@ -16,14 +16,13 @@ import org.springframework.web.client.RestTemplate;
 import rx.Observable;
 import rx.Subscriber;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicInteger;
 
 @Slf4j
 @Service
-//@Scope(proxyMode = ScopedProxyMode.INTERFACES)
+@Scope(proxyMode = ScopedProxyMode.INTERFACES)
 public class UserServiceImpl implements UserService {
 
     private AtomicInteger s = new AtomicInteger();
@@ -75,16 +74,15 @@ public class UserServiceImpl implements UserService {
                     @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000000000")
             },
             threadPoolKey = "queryContentshystrixJackpool", threadPoolProperties = {
-//            @HystrixProperty(name = "coreSize", value = "100")
+            @HystrixProperty(name = "coreSize", value = "100")
     })
     @Override
-    public List<String> queryContents() {
+    public List<ConsultContent> queryContents() {
         log.info(Thread.currentThread().getName() + "========queryContents=========");
         s.incrementAndGet();
-        String results = restTemplate.getForObject("http://"
-                + SERVIER_NAME + "/queryUser", String.class);
-        List<String> strings = Arrays.asList(results);
-        return strings;
+        List<ConsultContent> results = restTemplate.getForObject("http://"
+                + SERVIER_NAME + "/user/queryContent", List.class);
+        return results;
     }
 
     @HystrixCommand(fallbackMethod = "queryContentsAsynFallback")

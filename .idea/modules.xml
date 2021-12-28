@@ -3,8 +3,13 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/lesson-springcloud-2.iml" filepath="$PROJECT_DIR$/.idea/lesson-springcloud-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro-admin/micro-admin.iml" filepath="$PROJECT_DIR$/micro-admin/micro-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro-config-server/micro-config-server.iml" filepath="$PROJECT_DIR$/micro-config-server/micro-config-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/micro-order/micro-order.iml" filepath="$PROJECT_DIR$/micro-order/micro-order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro-service-api/micro-service-api.iml" filepath="$PROJECT_DIR$/micro-service-api/micro-service-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro-turbine/micro-turbine.iml" filepath="$PROJECT_DIR$/micro-turbine/micro-turbine.iml" />
       <module fileurl="file://$PROJECT_DIR$/micro-web/micro-web.iml" filepath="$PROJECT_DIR$/micro-web/micro-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micro-zuul/micro-zuul.iml" filepath="$PROJECT_DIR$/micro-zuul/micro-zuul.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud-dashboard/springcloud-dashboard.iml" filepath="$PROJECT_DIR$/springcloud-dashboard/springcloud-dashboard.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud-eureka/springcloud-eureka.iml" filepath="$PROJECT_DIR$/springcloud-eureka/springcloud-eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud-eureka1/springcloud-eureka1.iml" filepath="$PROJECT_DIR$/springcloud-eureka1/springcloud-eureka1.iml" />

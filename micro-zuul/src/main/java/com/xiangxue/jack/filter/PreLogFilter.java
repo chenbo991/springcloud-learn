@@ -29,8 +29,14 @@ public class PreLogFilter extends ZuulFilter {
         return 1;
     }
 
+    /**
+     *一个尝试获取这个过滤器链是否不需要继续执行。
+     * 比如在权限过滤发现没有权限，就会吧这个setSendZuulResponse为false.
+     * @return
+     */
     @Override
     public boolean shouldFilter() {
+        //当前线程的上下文。的
         return RequestContext.getCurrentContext().sendZuulResponse();
     }
 

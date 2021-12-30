@@ -69,12 +69,12 @@ public class UserServiceImpl implements UserService {
             commandKey = "queryContents",
             groupKey = "querygroup-one",
             commandProperties = {
-                    @HystrixProperty(name = "execution.isolation.semaphore.maxConcurrentRequests",value = "100"),
-                    @HystrixProperty(name = "execution.isolation.strategy", value = "SEMAPHORE"),
+//                    @HystrixProperty(name = "execution.isolation.thread.maxConcurrentRequests",value = "100"),
+                    @HystrixProperty(name = "execution.isolation.strategy", value = "THREAD"),
                     @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000000000")
             },
-            threadPoolKey = "queryContentshystrixJackpool", threadPoolProperties = {
-            @HystrixProperty(name = "coreSize", value = "100")
+            threadPoolKey = "queryContentshystrix陈博pool", threadPoolProperties = {
+            @HystrixProperty(name = "coreSize", value = "20")
     })
     @Override
     public List<ConsultContent> queryContents() {

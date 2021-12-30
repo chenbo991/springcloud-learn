@@ -33,7 +33,7 @@ public class StudentController implements StudentService {
 
     @RequestMapping("/feign/student/errorMessage")
     @Override
-    public String errorMessage(@RequestParam("id") Integer id) {
+    public String errorMessage(@RequestParam("id") Integer id) throws Exception {
         return studentService.errorMessage(id);
     }
 
